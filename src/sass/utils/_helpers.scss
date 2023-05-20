@@ -1,0 +1,51 @@
+/*placeholders helpers*/
+%linkHover{
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  fill: var(--white-color);
+}
+%indicators{
+    cursor: pointer;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+}
+
+%animationPink {
+    font-family: var(--second-font);
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--secondary1-color);
+    @include transitionCubicBezier;
+    display: inline-block;
+  }
+  %ColumnFlex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  %SocialPink {
+    background-color: var(--brand-color);
+    cursor: pointer;
+  }
+ 
+  %flipper{
+    width: 280px;
+    height: 489px;
+    border-radius: 25px;
+    background-color: var( --primary1-color);
+}
+%flipper2nd{
+    background-color:var(--primary2-color);
+}
+%flipper3rd{
+    background-color:var(--primary3-color);
+}
+%visibilityFlipper{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

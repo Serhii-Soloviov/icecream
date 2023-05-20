@@ -1,0 +1,97 @@
+@mixin center{
+    margin: 0 auto;
+}
+@mixin flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin title_md {
+  font-size: 26px;
+  line-height: 30px;
+}
+@mixin title_lg {
+  font-size: 30px;
+  line-height: 34px;
+} 
+
+@mixin flipper_md{
+  width: 224px;
+  height: 473px;
+}
+
+@mixin flipperLg{
+  width: 368px;
+  height: 535px;
+}
+@mixin transitionCubicBezier {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /*animation-footer*/
+  @mixin move-right-animation($duration, $timing-function) {
+    animation-name: move-right;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-fill-mode: forwards;
+  
+    @keyframes move-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(75px);
+      }
+    }
+  }
+  
+  @mixin move-down-animation($duration, $timing-function) {
+    position: relative;
+    animation-name: move-down;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-fill-mode: forwards;
+    color: var(--brand-color);
+  
+    @keyframes move-down {
+      0% {
+        transform: translateX(0) translateY(0);
+      }
+      50% {
+        transform: translateX(-130%) translateY(1.1em);
+      }
+      100% {
+        transform: translateX(-130%) translateY(1.1em);
+      }
+    }
+  }
+  @mixin gallery-list-item($items...) {
+  @each $item in $items {
+    $index: nth($item, 1);
+    $top: nth($item, 2);
+    &:nth-child(#{$index}) {
+      position: relative;
+      top: $top;
+    }
+  }
+}
+
+
+// Mixins
+@mixin paddings($paddingL, $paddingR) {
+  padding-left: $paddingL;
+  padding-right: $paddingR; 
+}
+@mixin textStyles ($font-family, $letter-spacing, $line-height, $font-size ,$font-weight){
+  font-family:$font-family;
+  letter-spacing:$letter-spacing;
+  line-height: $line-height;
+  font-size:$font-size;
+  font-weight:$font-weight;
+}
+@mixin marginesPaddings ($margin, $padding) {
+  margin:$margin;
+  padding: $padding;
+}

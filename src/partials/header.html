@@ -1,0 +1,36 @@
+<header class="header">
+    <div class="header__inner hero-container">
+      <img
+        width="200"
+        height="50"
+        srcset="
+          ./images/other/logo/Grouplogo.png    200w,
+          ./images/other/logo/Grouplogo400.png 400w
+        "
+        src="./images/other/logo/Grouplogo.png"
+        alt="logo"
+      />
+      <nav>
+        <ul class="header__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About us</a></li>
+          <li><a href="#how-its-made">How it's made?</a></li>
+          <li><a href="#products">Our products</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="button--nav js-open-menu">
+        <svg class="nav--icon">
+          <use
+            href="./images/other/svg/symbol-defs.svg#icon-nav-button"
+          ></use>
+        </svg>
+      </button>
+      <button class="button header__button" data-modal-open>
+        Buy now
+        <svg class="header__button-icon">
+          <use href="./images/other/svg/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
